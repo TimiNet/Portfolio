@@ -335,10 +335,26 @@
                     <div class="space-y-6">
                         <div class="bg-slate-800/40 p-5 rounded-xl border border-slate-700">
                             <h4 class="font-bold text-sky-300 mb-3 uppercase tracking-wider text-xs md:text-sm">Epreuve E6 - Maison des Ligues</h4>
-                            <p class="text-xs md:text-sm text-slate-300 leading-relaxed">
-                                Mission 1
-                                Mission 3
+                         
+                        <!-- PROJET M2L -->
+                        <div class="bg-slate-800/40 p-5 rounded-xl border border-slate-700">
+                            <h4 class="font-bold text-sky-300 mb-3 uppercase tracking-wider text-xs md:text-sm">Projet M2L (Maison des Ligues)</h4>
+                            <p class="text-xs md:text-sm text-slate-300 leading-relaxed mb-4">
+                                Infrastructure hybride : Mise en place de systèmes virtualisés sous Windows Server 2019 (Active Directory, DNS, DHCP) et déploiement physique du réseau avec switchs et routeurs pour la validation réelle des flux.
                             </p>
+                            
+                            <!-- Boutons Mission 1 & 3 intégrés harmonieusement -->
+                            <div class="flex flex-wrap gap-3">
+                                <button onclick="openMission('modal-mission1')" class="bg-sky-500/10 hover:bg-sky-500/30 border border-sky-500/30 text-sky-300 px-4 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+                                    Mission 1 - Réalisation n°1
+                                </button>
+                                <button onclick="openMission('modal-mission3')" class="bg-blue-500/10 hover:bg-blue-500/30 border border-blue-500/30 text-blue-300 px-4 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+                                    Mission 3 - Réalisation n°2
+                                </button>
+                            </div>
+                        </div>
                         </div>
                         <div class="bg-slate-800/40 p-5 rounded-xl border border-slate-700">
                             <h4 class="font-bold text-sky-300 mb-3 uppercase tracking-wider text-xs md:text-sm">Renouvellement de poste (Migration Windows 11)</h4>
@@ -521,6 +537,130 @@
         
     </main>
 
+            <!-- MISSION 1 -->
+    <div id="modal-mission1" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-sm p-4 overflow-y-auto">
+        <div class="max-w-3xl mx-auto my-8 bg-slate-900 border border-sky-500/30 rounded-3xl shadow-2xl relative overflow-hidden">
+            <div class="p-6 md:p-8 bg-gradient-to-r from-slate-800 to-slate-900 flex justify-between items-start border-b border-slate-700">
+                <div>
+                    <h2 class="text-2xl font-black text-white uppercase tracking-tighter">Mission 1</h2>
+                    <p class="text-sky-400 font-semibold mt-1">Installation, configuration et mise en route des serveurs</p>
+                </div>
+                <button onclick="closeMission('modal-mission1')" class="text-slate-500 hover:text-white bg-slate-800 p-2 rounded-full transition-colors focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                </button>
+            </div>
+            
+            <div class="p-6 md:p-8 space-y-6 text-left">
+                <!-- Contexte -->
+                <div class="bg-slate-800/40 p-4 rounded-xl border border-slate-700/50">
+                    <h4 class="font-bold text-sky-400 mb-2 flex items-center gap-2"><span class="text-lg">📋</span> Contexte</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed">La Maison des Ligues de Lorraine est une structure financée par la région, qui héberge les ligues sportives et leur met à disposition des locaux, des services mutualisés et une infrastructure informatique complète pour faciliter leur fonctionnement.</p>
+                </div>
+                <!-- Objectif -->
+                <div class="bg-slate-800/40 p-4 rounded-xl border border-slate-700/50">
+                    <h4 class="font-bold text-sky-400 mb-2 flex items-center gap-2"><span class="text-lg">🎯</span> Objectif de la mission</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed">L’objectif de cette mission est de déployer et mettre en service l’infrastructure serveur de la M2L, en configurant des services essentiels (DHCP, Active Directory, web et FTP) dans un environnement virtualisé et sécurisé.</p>
+                </div>
+                <!-- Outils -->
+                <div class="bg-slate-800/40 p-4 rounded-xl border border-slate-700/50">
+                    <h4 class="font-bold text-sky-400 mb-2 flex items-center gap-2"><span class="text-lg">💻</span> Logiciels et matériels utilisés</h4>
+                    <ul class="text-sm text-slate-300 list-disc list-inside space-y-1 ml-2">
+                        <li>OS: Serveur Windows Server 2019 </li>
+                        <li>Canva</li>
+                        <li>Hyperviseur: VMware Workstation</li>
+                        <li>Microsoft Visio</li>
+                        <li>Postes clients sous Windows 10 Pro</li>
+                    </ul>
+                </div>
+                <!-- Doc -->
+                <div class="bg-slate-800/40 p-4 rounded-xl border border-slate-700/50">
+                    <h4 class="font-bold text-sky-400 mb-2 flex items-center gap-2"><span class="text-lg">📁</span> Documentation</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed">Cette documentation présente les différentes étapes de l’installation, de la configuration et de la mise en service des serveurs de la M2L, en réponse aux besoins de son infrastructure.</p>
+                </div>
+                <!-- Résultat -->
+                <div class="bg-slate-800/40 p-4 rounded-xl border border-slate-700/50">
+                    <h4 class="font-bold text-sky-400 mb-2 flex items-center gap-2"><span class="text-lg">✅</span> Résultat attendu</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed">Une infrastructure serveur fonctionnelle et opérationnelle, intégrant les services DHCP, Active Directory, web et FTP, correctement configurés, sécurisés et validés par des tests de bon fonctionnement.</p>
+                </div>
+                <!-- Conclusion -->
+                <div class="mt-4 pt-4 border-t border-slate-700">
+                    <p class="text-sm text-slate-400 italic text-center font-semibold">À l’issue de cette mission, l’infrastructure serveur de la M2L est opérationnelle, sécurisée et conforme aux besoins définis, garantissant le bon fonctionnement des services réseau.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <!-- MISSION 3 -->
+    <div id="modal-mission3" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-sm p-4 overflow-y-auto">
+        <div class="max-w-3xl mx-auto my-8 bg-slate-900 border border-blue-500/30 rounded-3xl shadow-2xl relative overflow-hidden">
+            <div class="p-6 md:p-8 bg-gradient-to-r from-slate-800 to-slate-900 flex justify-between items-start border-b border-slate-700">
+                <div>
+                    <h2 class="text-2xl font-black text-white uppercase tracking-tighter">Mission 3</h2>
+                    <p class="text-blue-400 font-semibold mt-1">Commutation et Routage</p>
+                </div>
+                <button onclick="closeMission('modal-mission3')" class="text-slate-500 hover:text-white bg-slate-800 p-2 rounded-full transition-colors focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                </button>
+            </div>
+            
+            <div class="p-6 md:p-8 space-y-6 text-left">
+                <!-- Contexte -->
+                <div class="bg-slate-800/40 p-4 rounded-xl border border-slate-700/50">
+                    <h4 class="font-bold text-blue-400 mb-2 flex items-center gap-2"><span class="text-lg">📋</span> Contexte</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed">La Maison des Ligues de Lorraine est une structure financée par la région, qui héberge les ligues sportives et leur met à disposition des locaux, des services mutualisés et une infrastructure informatique complète pour faciliter leur fonctionnement.</p>
+                </div>
+                <!-- Objectif -->
+                <div class="bg-slate-800/40 p-4 rounded-xl border border-slate-700/50">
+                    <h4 class="font-bold text-blue-400 mb-2 flex items-center gap-2"><span class="text-lg">🎯</span> Objectif de la mission</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed">L’objectif de cette mission est de mettre en place une infrastructure réseau segmentée et sécurisée, en configurant les VLANs et le routage inter-VLAN afin d’assurer une bonne gestion des flux de données au sein de la M2L.</p>
+                </div>
+               <!-- Outils -->
+                <div class="bg-slate-800/40 p-4 rounded-xl border border-slate-700/50">
+                    <h4 class="font-bold text-blue-400 mb-4 flex items-center gap-2"><span class="text-lg">💻</span> Logiciels et matériels utilisés</h4>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Colonne Logiciels -->
+                        <div>
+                            <h5 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 border-b border-slate-700 pb-1">Logiciels</h5>
+                            <ul class="text-sm text-slate-300 space-y-1.5">
+                                <li class="flex items-center gap-2"><span class="text-blue-500 text-xs">▸</span> Canva</li>
+                                <li class="flex items-center gap-2"><span class="text-blue-500 text-xs">▸</span> Cisco Packet Tracer</li>
+                                <li class="flex items-center gap-2"><span class="text-blue-500 text-xs">▸</span> Microsoft Visio</li>
+                                <li class="flex items-center gap-2"><span class="text-blue-500 text-xs">▸</span> MobaxTerm</li>
+                                <li class="flex items-center gap-2"><span class="text-blue-500 text-xs">▸</span> VMware Workstation</li>
+                                <li class="flex items-center gap-2"><span class="text-blue-500 text-xs">▸</span> Windows Server</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Colonne Matériels -->
+                        <div>
+                            <h5 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 border-b border-slate-700 pb-1">Matériels</h5>
+                            <ul class="text-sm text-slate-300 space-y-1.5">
+                                <li class="flex items-center gap-2"><span class="text-blue-500 text-xs">▸</span> 2 Switch Cisco 2960</li>
+                                <li class="flex items-center gap-2"><span class="text-blue-500 text-xs">▸</span> 1 Switch Cisco 3750</li>
+                                <li class="flex items-center gap-2"><span class="text-blue-500 text-xs">▸</span> 1 Routeur Cisco 2800</li>
+                                <li class="flex items-center gap-2"><span class="text-blue-500 text-xs">▸</span> Poste personnel</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Doc -->
+                <div class="bg-slate-800/40 p-4 rounded-xl border border-slate-700/50">
+                    <h4 class="font-bold text-blue-400 mb-2 flex items-center gap-2"><span class="text-lg">📁</span> Documentation</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed">Cette documentation présente les choix techniques ainsi que les étapes de configuration des VLANs et du routage, permettant d’assurer la segmentation et la communication entre les différents réseaux de la M2L.</p>
+                </div>
+                <!-- Résultat -->
+                <div class="bg-slate-800/40 p-4 rounded-xl border border-slate-700/50">
+                    <h4 class="font-bold text-blue-400 mb-2 flex items-center gap-2"><span class="text-lg">✅</span> Résultat attendu</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed">Une infrastructure réseau fonctionnelle et opérationnelle, intégrant la segmentation en VLAN, le routage inter-VLAN et les configurations des équipements, correctement mise en œuvre, sécurisée, documentée et validée par des tests de bon fonctionnement.</p>
+                </div>
+                <!-- Conclusion -->
+                <div class="mt-4 pt-4 border-t border-slate-700">
+                    <p class="text-sm text-slate-400 italic text-center font-semibold">La mission est désormais clôturée avec la mise en service d’une infrastructure réseau opérationnelle, documentée et testée, conforme aux objectifs fixés.</p>
+                </div>
+            </div>
+        </div>
+    </div>
         <!-- 🟢 AJOUT CV : MODALE POUR LE CURRICULUM VITAE -->
     <div id="modal-cv" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-sm p-4 overflow-y-auto">
         <div class="max-w-4xl mx-auto my-8 bg-slate-900 border border-sky-500/30 rounded-3xl shadow-2xl relative overflow-hidden">
@@ -896,7 +1036,22 @@
             document.querySelectorAll('.skill-card').forEach(card => card.classList.remove('active-mobile'));
             if (!isActive) element.classList.add('active-mobile');
         }
+        function openMission(missionId) {
+            const modal = document.getElementById(missionId);
+            if (modal) {
+                modal.style.display = 'block'; 
+                document.body.style.overflow = 'hidden';
+            }
+        }
 
+        function closeMission(missionId) {
+            const modal = document.getElementById(missionId);
+            if (modal) {
+                modal.style.display = 'none'; 
+                document.body.style.overflow = 'auto';
+            }
+        }
+        
                 // 🟢 AJOUT CV : LOGIQUE DE LA MODALE CV
         function openCV() {
             const modal = document.getElementById('modal-cv');
@@ -993,6 +1148,15 @@
             if (!e.target.closest('.skill-card')) {
                 document.querySelectorAll('.skill-card').forEach(card => card.classList.remove('active-mobile'));
             }
+
+            const modalCV = document.getElementById('modal-cv');
+            if (e.target === modalCV) closeCV();
+
+            const modalMission1 = document.getElementById('modal-mission1');
+            if (e.target === modalMission1) closeMission('modal-mission1');
+
+            const modalMission3 = document.getElementById('modal-mission3');
+            if (e.target === modalMission3) closeMission('modal-mission3');
             
             // Fermeture Synthèse
             const modalSynthesis = document.getElementById('modal-synthesis');
