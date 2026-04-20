@@ -462,7 +462,38 @@
         </section>
 
     </main>
+        <!-- 🟢 SECTION CONTACT : À PLACER DIRECTEMENT DANS LE BODY -->
+    
+    <!-- Bouton Flottant -->
+    <div class="fixed bottom-8 right-8 z-40 group">
+        <span class="absolute inset-0 rounded-full bg-sky-400 opacity-0 group-hover:animate-ping group-hover:opacity-75 transition-opacity"></span>
+        <button onclick="openContact()" class="relative w-16 h-16 rounded-full bg-gradient-to-br from-sky-400 to-blue-600 flex items-center justify-center text-white shadow-xl hover:scale-110 transition-transform active:scale-95">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+        </button>
+    </div>
 
+    <!-- Modale de Contact -->
+    <div id="modal-contact" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-sm items-center justify-center p-4">
+        <div class="bg-slate-900 border border-sky-500/30 p-8 rounded-3xl max-w-sm w-full text-center relative shadow-2xl">
+            <button onclick="closeContact()" class="absolute top-4 right-4 text-slate-500 hover:text-white">✕</button>
+            <div class="w-16 h-16 bg-sky-500/20 rounded-2xl mx-auto mb-4 flex items-center justify-center text-sky-400 font-bold text-xl uppercase">AS</div>
+            <h3 class="text-xl font-extrabold text-white">Antoine SEVEUR</h3>
+            <p class="text-slate-400 text-sm mb-6">Technicien Systèmes & Réseaux</p>
+            
+            <button onclick="copyEmail()" class="w-full group flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-sky-400/50 transition-all relative">
+                <div class="w-10 h-10 rounded-lg bg-sky-500/20 flex items-center justify-center text-sky-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+                </div>
+                <div class="text-left">
+                    <p class="text-[10px] uppercase font-bold text-slate-500">Cliquer pour copier</p>
+                    <p class="text-sm font-medium text-slate-200">antoine.seveur@gmail.com</p>
+                </div>
+                <div id="copy-confirm" class="absolute -top-8 left-1/2 -translate-x-1/2 text-sky-400 text-xs font-bold opacity-0 transition-all">Copié !</div>
+            </button>
+        </div>
+    </div>
     <!-- Modal Synthesis - UPDATED WITH ALL USER DATA -->
     <div id="modal-synthesis">
         <div class="synthesis-table-container">
@@ -683,6 +714,38 @@
             }
             const modal = document.getElementById('modal-synthesis');
             if (e.target === modal) closeSynthesis();
+
+                         // ?? LOGIQUE DE LA MODALE CONTACT
+        function openContact() {
+            document.getElementById('modal-contact').style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Empêche le scroll derrière
+        }
+
+        function closeContact() {
+            document.getElementById('modal-contact').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Réactive le scroll
+        }
+
+        // ?? LOGIQUE DE COPIE D'EMAIL
+        function copyEmail() {
+            const email = "antoine.seveur@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                const confirm = document.getElementById('copy-confirm');
+                confirm.style.opacity = '1'; // Affiche le texte "Copié !"
+                confirm.style.bottom = '-20px'; // Le fait remonter légèrement
+                
+                // Cache le message après 2 secondes
+                setTimeout(() => {
+                    confirm.style.opacity = '0';
+                    confirm.style.bottom = '-25px';
+                }, 2000);
+            });
+        }
+
+        // FERMETURE AU CLIC EXTÉRIEUR
+        window.addEventListener('click', function(e) {
+            const modal = document.getElementById('modal-contact');
+            if (e.target === modal) closeContact();
         });
 
         const particles = document.getElementById('particles');
@@ -697,5 +760,5 @@
             particles.appendChild(dot);
         }
     </script>
-</body>
+    </body>
 </html>
