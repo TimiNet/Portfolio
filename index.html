@@ -267,11 +267,15 @@
             <div class="mt-8">
                 <h3 class="text-slate-400 uppercase tracking-widest text-xs font-bold mb-4 ml-2">Documents</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <a href="#" class="doc-btn p-4 rounded-xl flex items-center gap-4 group">
+                    
+                    <!-- 🟢 AJOUT CV : Modification du lien mort en bouton qui ouvre la modale CV -->
+                    <button onclick="openCV()" class="doc-btn p-4 rounded-xl flex items-center gap-4 group w-full text-left">
                         <div class="w-10 h-10 rounded-lg bg-sky-500/20 flex items-center justify-center text-sky-400 group-hover:bg-sky-400 group-hover:text-white transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
+                        </div>
+                        <div>
                         </div>
                         <div>
                             <p class="font-bold text-white">Mon CV</p>
@@ -462,6 +466,129 @@
         </section>
 
     </main>
+
+        <!-- 🟢 AJOUT CV : MODALE POUR LE CURRICULUM VITAE -->
+    <div id="modal-cv" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-sm p-4 overflow-y-auto">
+        <div class="max-w-4xl mx-auto my-8 bg-slate-900 border border-sky-500/30 rounded-3xl shadow-2xl relative overflow-hidden">
+            <!-- En-tête du CV -->
+            <div class="p-6 md:p-8 bg-gradient-to-r from-slate-800 to-slate-900 flex justify-between items-start border-b border-slate-700">
+                <div>
+                    <h2 class="text-3xl font-black text-white uppercase tracking-tighter">Antoine SEVEUR</h2>
+                    <p class="text-sky-400 font-semibold mt-1">Technicien Systèmes & Réseaux - BTS SIO SISR</p>
+                </div>
+                <button onclick="closeCV()" class="text-slate-500 hover:text-white bg-slate-800 p-2 rounded-full transition-colors focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                </button>
+            </div>
+            
+            <!-- Corps du CV -->
+            <div class="p-6 md:p-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                
+                <!-- Colonne de gauche -->
+                <div class="md:col-span-1 space-y-8">
+                    <!-- Section Profil -->
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-3 border-b border-slate-700 pb-2">Profil</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">Étudiant en BTS SIO SISR, spécialisé en infrastructures réseaux, sécurité et supervision. Rigoureux, autonome et doté d'un bon relationnel.</p>
+                    </div>
+
+                    <!-- Section Contact -->
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-3 border-b border-slate-700 pb-2">Contact</h3>
+                        <ul class="text-sm text-slate-400 space-y-3">
+                            <li class="flex items-center gap-3"><span class="text-sky-400">📍</span> 13 avenue Marc André<br>97224 Ducos</li>
+                            <li class="flex items-center gap-3"><span class="text-sky-400">📞</span> 06 96 05 30 44</li>
+                            <li class="flex items-center gap-3"><span class="text-sky-400">✉️</span> antoine.seveur@gmail.com</li>
+                        </ul>
+                    </div>
+
+                    <!-- Section Compétences -->
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-3 border-b border-slate-700 pb-2">Compétences</h3>
+                        <ul class="text-sm text-slate-400 space-y-2">
+                            <li><span class="text-sky-400 font-bold block">Systèmes :</span> Windows Server, Linux</li>
+                            <li><span class="text-sky-400 font-bold block mt-2">Réseaux :</span> DHCP, DNS, VLAN</li>
+                            <li><span class="text-sky-400 font-bold block mt-2">Sécurité :</span> Firewall, Zscaler</li>
+                            <li><span class="text-sky-400 font-bold block mt-2">Outils :</span> VMware, Zabbix, Ekahau</li>
+                            <li><span class="text-sky-400 font-bold block mt-2">Langues :</span> Français (Maternel), Créole (Courant), Anglais (Intermédiaire)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Colonne de droite -->
+                <div class="md:col-span-2 space-y-8">
+                    <!-- Section Expériences -->
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4 border-b border-slate-700 pb-2 text-sky-400">Expériences Professionnelles</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between items-baseline mb-1">
+                                    <h4 class="font-bold text-slate-200">Technicien SI</h4>
+                                    <span class="text-xs text-sky-400 bg-sky-900/30 px-2 py-1 rounded font-semibold">2024 - Présent</span>
+                                </div>
+                                <p class="text-sm text-slate-400 font-medium mb-2">Groupe La Poste (Martinique)</p>
+                                <ul class="text-sm text-slate-400 list-disc list-inside space-y-1 ml-2">
+                                    <li>Installation, configuration et maintenance du parc informatique.</li>
+                                    <li>Support technique de proximité et gestion des incidents.</li>
+                                    <li>Administration de 1er niveau des comptes et droits (AD).</li>
+                                    <li>Déploiement logiciel et mises à jour de sécurité.</li>
+                                    <li>Gestion de l'inventaire et brassage réseau.</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between items-baseline mb-1">
+                                    <h4 class="font-bold text-slate-200">Chauffeur-livreur</h4>
+                                    <span class="text-xs text-slate-500">2021 - 2024</span>
+                                </div>
+                                <p class="text-sm text-slate-400 font-medium">SBT Transport (Oyonnax)</p>
+                                <p class="text-xs text-slate-500 mt-1">Livraison de marchandises, relation client et optimisation des tournées.</p>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <h4 class="font-bold text-slate-200 text-sm">Manutentionnaire</h4>
+                                    <p class="text-xs text-slate-400">Terra Flora (Izernore) | <span class="text-slate-500">2021</span></p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-200 text-sm">Préparateur de commande</h4>
+                                    <p class="text-xs text-slate-400">Axe Froid | <span class="text-slate-500">2021</span></p>
+                                </div>
+                                <div class="col-span-2">
+                                    <h4 class="font-bold text-slate-200 text-sm">Conseiller vendeur</h4>
+                                    <p class="text-xs text-slate-400">Decathlon (Le Lamentin) | <span class="text-slate-500">2018 - 2019</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section Formation -->
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4 border-b border-slate-700 pb-2 text-sky-400">Formation</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between items-baseline mb-1">
+                                    <h4 class="font-bold text-slate-200">BTS SIO SISR</h4>
+                                    <span class="text-xs text-slate-500 font-semibold">2024 - 2026</span>
+                                </div>
+                                <p class="text-sm text-slate-400">CFA Skillfor Campus (Schœlcher)</p>
+                                <p class="text-xs text-slate-500 mt-1">Solutions d'Infrastructure, Systèmes et Réseaux.</p>
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-baseline mb-1">
+                                    <h4 class="font-bold text-slate-200">Bac STI2D</h4>
+                                    <span class="text-xs text-slate-500 font-semibold">2017</span>
+                                </div>
+                                <p class="text-sm text-slate-400">Lycée Technique (Martinique)</p>
+                                <p class="text-xs text-slate-500 mt-1">Sciences et Technologies de l'Industrie et du Développement Durable.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Modal Synthesis - UPDATED WITH ALL USER DATA -->
     <div id="modal-synthesis">
         <div class="synthesis-table-container">
@@ -714,6 +841,23 @@
             const isActive = element.classList.contains('active-mobile');
             document.querySelectorAll('.skill-card').forEach(card => card.classList.remove('active-mobile'));
             if (!isActive) element.classList.add('active-mobile');
+        }
+
+                // 🟢 AJOUT CV : LOGIQUE DE LA MODALE CV
+        function openCV() {
+            const modal = document.getElementById('modal-cv');
+            if (modal) {
+                modal.style.display = 'block'; 
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeCV() {
+            const modal = document.getElementById('modal-cv');
+            if (modal) {
+                modal.style.display = 'none'; 
+                document.body.style.overflow = 'auto';
+            }
         }
 
         // 🟢 LOGIQUE DU TABLEAU DE SYNTHÈSE
