@@ -661,7 +661,6 @@
             </div>
             
             <h3 class="text-xl font-extrabold text-white">Antoine SEVEUR</h3>
-            <p class="text-slate-400 text-sm mb-4">Technicien Systèmes & Réseaux</p>
             
             <div class="flex items-center justify-center gap-2 text-slate-300 text-xs mb-6">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -695,6 +694,7 @@
     </footer>
 
     <script>
+               // LOGIQUE DES ONGLETS
         function showTab(tabId) {
             document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
             document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
@@ -704,93 +704,108 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
+        // LOGIQUE MENU MOBILE
         function toggleMobileMenu() {
             document.getElementById('mobile-menu').classList.toggle('open');
         }
 
-        function openSynthesis() {
-            document.getElementById('modal-synthesis').style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeSynthesis() {
-            document.getElementById('modal-synthesis').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
+        // LOGIQUE INFOBULLES COMPÉTENCES
         function toggleTooltip(element) {
             const isActive = element.classList.contains('active-mobile');
             document.querySelectorAll('.skill-card').forEach(card => card.classList.remove('active-mobile'));
             if (!isActive) element.classList.add('active-mobile');
         }
 
-        document.addEventListener('click', function(e) {
-            if (!e.target.closest('.skill-card')) {
-                document.querySelectorAll('.skill-card').forEach(card => card.classList.remove('active-mobile'));
-        }
+        // 🟢 LOGIQUE DU TABLEAU DE SYNTHÈSE
+        function openSynthesis() {
             const modal = document.getElementById('modal-synthesis');
-            if (e.target === modal) closeSynthesis();
+            if (modal) {
+                modal.style.display = 'block'; // Force l'affichage
+                document.body.style.overflow = 'hidden';
+            }
         }
 
-                // FONTIONS POUR LE CONTACT
+        function closeSynthesis() {
+            const modal = document.getElementById('modal-synthesis');
+            if (modal) {
+                modal.style.display = 'none'; // Force la fermeture
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // 🟡 LOGIQUE DE LA MODALE CONTACT
         function openContact() {
-            document.getElementById('modal-contact').style.display = 'flex';
-            document.body.style.overflow = 'hidden';
+            const modal = document.getElementById('modal-contact');
+            if (modal) {
+                modal.style.display = 'flex'; // Affichage en mode Flex (pour centrer la carte)
+                document.body.style.overflow = 'hidden';
+            }
         }
 
         function closeContact() {
-            document.getElementById('modal-contact').style.display = 'none';
-            document.body.style.overflow = 'auto';
+            const modal = document.getElementById('modal-contact');
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
         }
 
+        // 🟠 LOGIQUE DE COPIE D'EMAIL
         function copyEmail() {
             const email = "antoine.seveur@gmail.com";
             
             if (navigator.clipboard && window.isSecureContext) {
-                navigator.clipboard.writeText(email).then(showCopyFeedback);
+                navigator.clipboard.writeText(email).then(showCopyFeedback).catch(err => fallbackCopyTextToClipboard(email));
             } else {
-                // Fallback
-                const textArea = document.createElement("textarea");
-                textArea.value = email;
-                document.body.appendChild(textArea);
-                textArea.select();
-                try {
-                    document.execCommand('copy');
-                    showCopyFeedback();
-                } catch (err) {
-                    console.error('Erreur lors de la copie', err);
-                }
-                document.body.removeChild(textArea);
+                fallbackCopyTextToClipboard(email);
             }
+        }
+
+        function fallbackCopyTextToClipboard(text) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showCopyFeedback();
+            } catch (err) {
+                console.error('Erreur lors de la copie', err);
+            }
+            document.body.removeChild(textArea);
         }
 
         function showCopyFeedback() {
             const confirm = document.getElementById('copy-confirm');
-            confirm.style.opacity = '1';
-            confirm.style.transform = 'translate(-50%, -10px)';
-            
-            setTimeout(() => {
-                confirm.style.opacity = '0';
-                confirm.style.transform = 'translate(-50%, 0px)';
-            }, 2000);
+            if (confirm) {
+                confirm.style.opacity = '1';
+                confirm.style.transform = 'translate(-50%, -10px)';
+                
+                setTimeout(() => {
+                    confirm.style.opacity = '0';
+                    confirm.style.transform = 'translate(-50%, 0px)';
+                }, 2000);
+            }
         }
 
-        // GESTION DES CLICS EXTÉRIEURS POUR TOUTES LES MODALES ET INFOBULLES
+        // 🔵 FERMETURE AU CLIC EXTÉRIEUR
         window.addEventListener('click', function(e) {
-            // Fermer infobulles si clic ailleurs
+            // Fermeture Infobulles
             if (!e.target.closest('.skill-card')) {
                 document.querySelectorAll('.skill-card').forEach(card => card.classList.remove('active-mobile'));
             }
-            // Fermer Synthèse
+            
+            // Fermeture Synthèse
             const modalSynthesis = document.getElementById('modal-synthesis');
             if (e.target === modalSynthesis) closeSynthesis();
             
-            // Fermer Contact
+            // Fermeture Contact
             const modalContact = document.getElementById('modal-contact');
             if (e.target === modalContact) closeContact();
         });
 
-        // GÉNÉRATION DES PARTICULES
+        // EFFET DE FOND (PARTICULES)
         const particles = document.getElementById('particles');
         for (let i = 0; i < 35; i++) {
             const dot = document.createElement('div');
