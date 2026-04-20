@@ -434,37 +434,90 @@
 
             <h3 class="text-xl font-bold mb-6 italic text-slate-300">Actualités (Novembre 2025 - Avril 2026)</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Actualité 1 -->
-                <article class="glass p-5 border-l-2 border-sky-500">
-                    <span class="text-[10px] text-sky-400 font-bold block mb-2 uppercase">Cyber • Nov 2025</span>
-                    <h4 class="font-bold text-white mb-2">Renforcement de la norme Wi-Fi 7 pour les entreprises</h4>
-                    <p class="text-xs text-slate-400 mb-4">Déploiement des premières infrastructures optimisées Wi-Fi 7 garantissant une latence ultra-faible pour les services cloud critiques.</p>
-                    <a href="https://www.zdnet.fr" target="_blank" class="text-sky-400 text-[10px] font-bold">SOURCE ZDNET →</a>
+            
+                <!-- Article 1 : CERT-FR -->
+                <article class="glass p-5 border-l-2 border-sky-500 hover:border-sky-300 transition-colors flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-[10px] text-sky-400 font-bold uppercase tracking-wider">Vulnérabilité • CERT-FR</span>
+                        <span class="text-[10px] text-slate-400 bg-white/5 px-2 py-0.5 rounded border border-white/5">15 Avr 2026</span>
+                    </div>
+                    <h4 class="font-bold text-white mb-3 text-lg leading-tight">Avis de sécurité CERT-FR (CERTFR-2026-AVI-0452)</h4>
+                    <p class="text-sm text-slate-400 mb-4">Alerte et recommandations officielles de l'ANSSI concernant une vulnérabilité critique nécessitant une mise à jour rapide des systèmes.</p>
+                    <div class="mb-6 flex-grow bg-slate-800/50 border-l-2 border-sky-500 p-3 rounded-r-lg">
+                        <span class="text-[10px] font-bold text-sky-400 uppercase tracking-wider block mb-1">Mon analyse</span>
+                        <p class="text-xs text-slate-300 italic">Cette alerte démontre l'importance d'une gestion rigoureuse des correctifs (patch management). En tant qu'administrateur, assurer une veille active sur le CERT-FR et appliquer ces recommandations est crucial pour maintenir l'intégrité du SI.</p>
+                    </div>
+                    <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0452/" target="_blank" class="inline-flex items-center gap-2 text-sky-400 hover:text-sky-300 text-xs font-bold mt-auto group w-fit">
+                        LIRE L'ARTICLE 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </a>
                 </article>
-                <!-- Actualité 2 -->
-                <article class="glass p-5 border-l-2 border-sky-500">
-                    <span class="text-[10px] text-sky-400 font-bold block mb-2 uppercase">Cloud • Jan 2026</span>
-                    <h4 class="font-bold text-white mb-2">L'IA générative au service du troubleshooting réseau</h4>
-                    <p class="text-xs text-slate-400 mb-4">Intégration d'outils d'analyse prédictive dans les consoles d'administration pour résoudre les incidents avant l'impact utilisateur.</p>
-                    <a href="https://www.lemondeinformatique.fr" target="_blank" class="text-sky-400 text-[10px] font-bold">SOURCE LMI →</a>
+
+                <!-- Article 2 : IoT & Espionnage -->
+                <article class="glass p-5 border-l-2 border-sky-500 hover:border-sky-300 transition-colors flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-[10px] text-sky-400 font-bold uppercase tracking-wider">IoT & Confidentialité • UnderNews</span>
+                        <span class="text-[10px] text-slate-400 bg-white/5 px-2 py-0.5 rounded border border-white/5">02 Avr 2026</span>
+                    </div>
+                    <h4 class="font-bold text-white mb-3 text-lg leading-tight">7 appareils connectés qui peuvent vous espionner</h4>
+                    <p class="text-sm text-slate-400 mb-4">Analyse des risques liés à l'Internet des Objets (IoT) et aux nouvelles menaces silencieuses pesant sur la vie privée des utilisateurs au quotidien.</p>
+                    <div class="mb-6 flex-grow bg-slate-800/50 border-l-2 border-sky-500 p-3 rounded-r-lg">
+                        <span class="text-[10px] font-bold text-sky-400 uppercase tracking-wider block mb-1">Mon analyse</span>
+                        <p class="text-xs text-slate-300 italic">L'expansion de l'IoT élargit considérablement la surface d'attaque, ces appareils étant souvent peu sécurisés par conception (mots de passe codés en dur, manque de mises à jour). Il devient impératif de segmenter les réseaux (VLAN dédiés IoT) pour les isoler.</p>
+                    </div>
+                    <a href="https://www.undernews.fr/reseau-securite/7-appareils-connectes-qui-peuvent-vous-espionner.html" target="_blank" class="inline-flex items-center gap-2 text-sky-400 hover:text-sky-300 text-xs font-bold mt-auto group w-fit">
+                        LIRE L'ARTICLE 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </a>
                 </article>
-                <!-- Actualité 3 -->
-                <article class="glass p-5 border-l-2 border-sky-500">
-                    <span class="text-[10px] text-sky-400 font-bold block mb-2 uppercase">Sécurité • Mars 2026</span>
-                    <h4 class="font-bold text-white mb-2">Évolution du Zero Trust : Identité décentralisée</h4>
-                    <p class="text-xs text-slate-400 mb-4">Nouvelles approches de gestion des accès privilégiés basées sur la vérification continue des terminaux et des comportements.</p>
-                    <a href="https://www.itpro.fr" target="_blank" class="text-sky-400 text-[10px] font-bold">SOURCE ITPRO →</a>
+
+                <!-- Article 3 : Fuite de code Claude -->
+                <article class="glass p-5 border-l-2 border-sky-500 hover:border-sky-300 transition-colors flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-[10px] text-sky-400 font-bold uppercase tracking-wider">Fuite de Données • UnderNews</span>
+                        <span class="text-[10px] text-slate-400 bg-white/5 px-2 py-0.5 rounded border border-white/5">10 Mar 2026</span>
+                    </div>
+                    <h4 class="font-bold text-white mb-3 text-lg leading-tight">Fuite de code chez Claude Code : analyses et impacts</h4>
+                    <p class="text-sm text-slate-400 mb-4">Retour sur l'incident de sécurité impliquant Claude Code, avec les commentaires et l'analyse de Melissa Bischoping (Tanium) sur la sécurisation du code source.</p>
+                    <div class="mb-6 flex-grow bg-slate-800/50 border-l-2 border-sky-500 p-3 rounded-r-lg">
+                        <span class="text-[10px] font-bold text-sky-400 uppercase tracking-wider block mb-1">Mon analyse</span>
+                        <p class="text-xs text-slate-300 italic">Cet incident souligne que la sécurité des environnements de développement est tout aussi critique que celle de la production. L'intégration de la sécurité dès la conception (SecDevOps) et le contrôle d'accès strict au code source sont des prérequis absolus.</p>
+                    </div>
+                    <a href="https://www.undernews.fr/reseau-securite/fuite-de-code-chez-claude-code-les-commentaires-de-melissa-bischoping-de-tanium.html" target="_blank" class="inline-flex items-center gap-2 text-sky-400 hover:text-sky-300 text-xs font-bold mt-auto group w-fit">
+                        LIRE L'ARTICLE 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </a>
                 </article>
-                <!-- Actualité 4 -->
-                <article class="glass p-5 border-l-2 border-sky-500">
-                    <span class="text-[10px] text-sky-400 font-bold block mb-2 uppercase">Système • Avril 2026</span>
-                    <h4 class="font-bold text-white mb-2">Sortie des nouveaux patchs de sécurité Windows Server 2025</h4>
-                    <p class="text-xs text-slate-400 mb-4">Mise au point sur les vulnérabilités corrigées et les nouvelles fonctionnalités de conteneurisation native pour les SI hybrides.</p>
-                    <a href="https://www.it-connect.fr" target="_blank" class="text-sky-400 text-[10px] font-bold">SOURCE IT-CONNECT →</a>
+
+                <!-- Article 4 : Backup PME -->
+                <article class="glass p-5 border-l-2 border-sky-500 hover:border-sky-300 transition-colors flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-[10px] text-sky-400 font-bold uppercase tracking-wider">Résilience & Stockage • UnderNews</span>
+                        <span class="text-[10px] text-slate-400 bg-white/5 px-2 py-0.5 rounded border border-white/5">31 Mar 2026</span>
+                    </div>
+                    <h4 class="font-bold text-white mb-3 text-lg leading-tight">World Backup Day : L'enjeu critique pour les PME</h4>
+                    <p class="text-sm text-slate-400 mb-4">Pourquoi la stratégie de sauvegarde des données est aujourd'hui indispensable face à la recrudescence des ransomwares et pour garantir la continuité d'activité.</p>
+                    <div class="mb-6 flex-grow bg-slate-800/50 border-l-2 border-sky-500 p-3 rounded-r-lg">
+                        <span class="text-[10px] font-bold text-sky-400 uppercase tracking-wider block mb-1">Mon analyse</span>
+                        <p class="text-xs text-slate-300 italic">Face aux ransomwares, la sauvegarde (notamment la règle du 3-2-1 dont une copie hors-ligne) reste la meilleure ligne de défense. Sensibiliser les PME à la mise en place de plans de reprise d'activité (PRA) fonctionnels est une mission clé du SISR.</p>
+                    </div>
+                    <a href="https://www.undernews.fr/reseau-securite/sauvegardes-stockage-donnees/world-backup-day-pourquoi-la-sauvegarde-des-donnees-est-devenue-un-enjeu-critique-pour-la-resilience-des-pme.html" target="_blank" class="inline-flex items-center gap-2 text-sky-400 hover:text-sky-300 text-xs font-bold mt-auto group w-fit">
+                        LIRE L'ARTICLE 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </a>
                 </article>
+
             </div>
         </section>
-
+        
     </main>
 
         <!-- 🟢 AJOUT CV : MODALE POUR LE CURRICULUM VITAE -->
