@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+      <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -335,7 +335,7 @@
                     <div class="space-y-6">
                         <div class="bg-slate-800/40 p-5 rounded-xl border border-slate-700">
                             <h4 class="font-bold text-sky-300 mb-3 uppercase tracking-wider text-xs md:text-sm">Epreuve E6 - Maison des Ligues</h4>
-                         
+                                                 
                         <!-- PROJET M2L -->
                         <div class="bg-slate-800/40 p-5 rounded-xl border border-slate-700">
                             <h4 class="font-bold text-sky-300 mb-3 uppercase tracking-wider text-xs md:text-sm">Projet M2L (Maison des Ligues)</h4>
@@ -536,8 +536,9 @@
         </section>
         
     </main>
-
-            <!-- MISSION 1 -->
+    
+    
+        <!-- MISSION 1 -->
     <div id="modal-mission1" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-sm p-4 overflow-y-auto">
         <div class="max-w-3xl mx-auto my-8 bg-slate-900 border border-sky-500/30 rounded-3xl shadow-2xl relative overflow-hidden">
             <div class="p-6 md:p-8 bg-gradient-to-r from-slate-800 to-slate-900 flex justify-between items-start border-b border-slate-700">
@@ -588,8 +589,8 @@
                             <span class="text-3xl mb-2 group-hover:scale-110 transition-transform">📝</span>
                             <span class="text-xs font-bold text-slate-200 group-hover:text-sky-300 text-center">Choix techniques</span>
                         </button>
-                    </div>                    
                 </div>
+            </div>
                 <!-- Résultat -->
                 <div class="bg-slate-800/40 p-4 rounded-xl border border-slate-700/50">
                     <h4 class="font-bold text-sky-400 mb-2 flex items-center gap-2"><span class="text-lg">✅</span> Résultat attendu</h4>
@@ -659,8 +660,25 @@
                 </div>
                 <!-- Doc -->
                 <div class="bg-slate-800/40 p-4 rounded-xl border border-slate-700/50">
-                    <h4 class="font-bold text-blue-400 mb-2 flex items-center gap-2"><span class="text-lg">📁</span> Documentation</h4>
-                    <p class="text-sm text-slate-300 leading-relaxed">Cette documentation présente les choix techniques ainsi que les étapes de configuration des VLANs et du routage, permettant d’assurer la segmentation et la communication entre les différents réseaux de la M2L.</p>
+                    <h4 class="font-bold text-blue-400 mb-4 flex items-center gap-2"><span class="text-lg">📁</span> Documentation de la mission</h4>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                        <button onclick="openDoc('modal-doc3-pres')" class="flex flex-col items-center justify-center p-3 bg-white/5 hover:bg-blue-500/20 border border-white/10 hover:border-blue-500/50 rounded-xl transition-all group">
+                            <span class="text-2xl mb-1 group-hover:scale-110 transition-transform">📊</span>
+                            <span class="text-[10px] font-bold text-slate-200 group-hover:text-blue-300 text-center uppercase tracking-wider">M2L - Mission 3</span>
+                        </button>
+                        <button onclick="openDoc('modal-doc3-config')" class="flex flex-col items-center justify-center p-3 bg-white/5 hover:bg-blue-500/20 border border-white/10 hover:border-blue-500/50 rounded-xl transition-all group">
+                            <span class="text-2xl mb-1 group-hover:scale-110 transition-transform">⚙️</span>
+                            <span class="text-[10px] font-bold text-slate-200 group-hover:text-blue-300 text-center uppercase tracking-wider">Fichiers Config</span>
+                        </button>
+                        <button onclick="openDoc('modal-doc3-test')" class="flex flex-col items-center justify-center p-3 bg-white/5 hover:bg-blue-500/20 border border-white/10 hover:border-blue-500/50 rounded-xl transition-all group">
+                            <span class="text-2xl mb-1 group-hover:scale-110 transition-transform">📋</span>
+                            <span class="text-[10px] font-bold text-slate-200 group-hover:text-blue-300 text-center uppercase tracking-wider">Tests Mission 3</span>
+                        </button>
+                        <button onclick="openDoc('modal-doc3-justif')" class="flex flex-col items-center justify-center p-3 bg-white/5 hover:bg-blue-500/20 border border-white/10 hover:border-blue-500/50 rounded-xl transition-all group">
+                            <span class="text-2xl mb-1 group-hover:scale-110 transition-transform">📝</span>
+                            <span class="text-[10px] font-bold text-slate-200 group-hover:text-blue-300 text-center uppercase tracking-wider">Choix Tech.</span>
+                        </button>
+                    </div>
                 </div>
                 <!-- Résultat -->
                 <div class="bg-slate-800/40 p-4 rounded-xl border border-slate-700/50">
@@ -674,6 +692,7 @@
             </div>
         </div>
     </div>
+
         <!-- 🟢 AJOUT CV : MODALE POUR LE CURRICULUM VITAE -->
     <div id="modal-cv" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-sm p-4 overflow-y-auto">
         <div class="max-w-4xl mx-auto my-8 bg-slate-900 border border-sky-500/30 rounded-3xl shadow-2xl relative overflow-hidden">
@@ -975,7 +994,7 @@
             </div>
         </div>
     </div>
-
+    
         <!-- ============================================== -->
     <!-- NOUVELLES MODALES DE DOCUMENTATION (MISSION 1) -->
     <!-- ============================================== -->
@@ -994,7 +1013,6 @@
                     <span class="absolute bottom-4 right-4 text-slate-600 text-sm">1</span>
                     <h2 class="text-4xl md:text-5xl font-black text-white uppercase text-center mb-6">Maison des Ligues</h2>
                     <div class="h-1 w-24 bg-sky-500 mb-6"></div>
-                    <p class="text-xl text-sky-400">Yala Kewane</p>
                     <p class="text-xl text-sky-400">Seveur Antoine</p>
                 </div>
 
@@ -1017,20 +1035,29 @@
                     </ul>
                 </div>
 
-                <!-- Slide 4 & 5 (Images placeholders) -->
-                <div class="aspect-video bg-slate-800 border border-slate-700 rounded-xl p-12 shadow-lg relative flex flex-col items-center justify-center text-center">
-                    <span class="absolute bottom-4 right-4 text-slate-600 text-sm">4</span>
-                    <h3 class="text-3xl font-bold text-sky-400 mb-6 w-full text-left">Planification</h3>
-                    <div class="flex-grow w-full border-2 border-dashed border-slate-600 rounded-lg flex items-center justify-center bg-slate-900/50">
-                        <p class="text-slate-500 flex flex-col items-center gap-2"><span class="text-4xl">📅</span> [Image de Planification]</p>
+                <!-- Slide 4 -->
+                <div class="aspect-video bg-slate-800 border border-slate-700 rounded-xl p-6 shadow-lg relative flex flex-col">
+                    <span class="absolute bottom-4 right-4 text-slate-600 text-sm z-10 bg-slate-800 px-2 rounded">4</span>
+                    <h3 class="text-3xl font-bold text-sky-400 mb-4 w-full text-left shrink-0">Planification</h3>
+                    <div class="relative flex-grow w-full rounded-lg overflow-hidden shadow-inner bg-slate-900/50">
+                        <img src="Plannification - Mission 1.png" alt="Planification" class="absolute inset-0 w-full h-full object-contain p-2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="hidden absolute inset-0 flex flex-col items-center justify-center text-slate-500 text-center p-4">
+                            <span class="text-4xl mb-2">📁</span>
+                            <p class="text-sm">Pour afficher l'image, placez <b>Plannification - Mission 1.png</b><br>dans le même dossier que ce fichier HTML.</p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="aspect-video bg-slate-800 border border-slate-700 rounded-xl p-12 shadow-lg relative flex flex-col items-center justify-center text-center">
-                    <span class="absolute bottom-4 right-4 text-slate-600 text-sm">5</span>
-                    <h3 class="text-3xl font-bold text-sky-400 mb-6 w-full text-left">Schéma réseau</h3>
-                    <div class="flex-grow w-full border-2 border-dashed border-slate-600 rounded-lg flex items-center justify-center bg-slate-900/50">
-                        <p class="text-slate-500 flex flex-col items-center gap-2"><span class="text-4xl">🗺️</span> [Image de Schéma réseau]</p>
+                <!-- Slide 5 -->
+                <div class="aspect-video bg-slate-800 border border-slate-700 rounded-xl p-6 shadow-lg relative flex flex-col">
+                    <span class="absolute bottom-4 right-4 text-slate-600 text-sm z-10 bg-slate-800 px-2 rounded">5</span>
+                    <h3 class="text-3xl font-bold text-sky-400 mb-4 w-full text-left shrink-0">Schéma réseau</h3>
+                    <div class="relative flex-grow w-full rounded-lg overflow-hidden shadow-inner bg-white">
+                        <img src="Microsoft Visio - Mission 1.png" alt="Schéma réseau" class="absolute inset-0 w-full h-full object-contain p-2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="hidden absolute inset-0 flex flex-col items-center justify-center text-slate-500 text-center p-4 bg-slate-900/50">
+                            <span class="text-4xl mb-2">📁</span>
+                            <p class="text-sm text-slate-300">Pour afficher l'image, placez <b>Microsoft Visio - Mission 1.png</b><br>dans le même dossier que ce fichier HTML.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -1038,20 +1065,28 @@
                 <div class="aspect-video bg-slate-800 border border-slate-700 rounded-xl p-12 shadow-lg relative flex flex-col justify-center text-center">
                     <span class="absolute bottom-4 right-4 text-slate-600 text-sm">6</span>
                     <h3 class="text-3xl font-bold text-sky-400 mb-6">Procédure de test</h3>
-                    <div class="p-6 bg-slate-900/50 rounded-xl border border-slate-700 inline-block mx-auto">
-                        <p class="text-xl text-slate-300">Les fichiers de test sont situés dans le dossier "AP Mission 1".</p>
+                    <div class="p-6 bg-slate-900/50 rounded-xl border border-slate-700 inline-block mx-auto hover:border-sky-500 transition-colors">
+                        <p class="text-xl text-slate-300">
+                            <button onclick="closeDoc('modal-doc-pres'); openDoc('modal-doc-test')" class="text-sky-400 hover:text-sky-300 underline underline-offset-4 cursor-pointer transition-all">
+                                Accéder au fichier de procédure de test.
+                            </button>
+                        </p>
                     </div>
-                    <p class="text-slate-500 mt-6 text-sm">(Voir le document annexe "Procédure de test")</p>
+                    <p class="text-slate-500 mt-6 text-sm">(Cliquez sur le lien ci-dessus pour ouvrir la procédure)</p>
                 </div>
 
                 <!-- Slide 7 -->
                 <div class="aspect-video bg-slate-800 border border-slate-700 rounded-xl p-12 shadow-lg relative flex flex-col justify-center text-center">
                     <span class="absolute bottom-4 right-4 text-slate-600 text-sm">7</span>
                     <h3 class="text-3xl font-bold text-sky-400 mb-6">Justification des choix techniques</h3>
-                    <div class="p-6 bg-slate-900/50 rounded-xl border border-slate-700 inline-block mx-auto">
-                        <p class="text-xl text-slate-300">Le fichier de justification des choix techniques est situé dans le dossier "AP Mission 1".</p>
+                    <div class="p-6 bg-slate-900/50 rounded-xl border border-slate-700 inline-block mx-auto hover:border-sky-500 transition-colors">
+                        <p class="text-xl text-slate-300">
+                            <button onclick="closeDoc('modal-doc-pres'); openDoc('modal-doc-justif')" class="text-sky-400 hover:text-sky-300 underline underline-offset-4 cursor-pointer transition-all">
+                                Accéder au fichier de justification des choix techniques.
+                            </button>
+                        </p>
                     </div>
-                    <p class="text-slate-500 mt-6 text-sm">(Voir le document annexe "Choix techniques")</p>
+                    <p class="text-slate-500 mt-6 text-sm">(Cliquez sur le lien ci-dessus pour ouvrir les choix techniques)</p>
                 </div>
 
                 <!-- Slide 8 -->
@@ -1059,7 +1094,7 @@
                     <span class="absolute bottom-4 right-4 text-slate-600 text-sm">8</span>
                     <h2 class="text-5xl font-black text-white uppercase text-center mb-8">Merci</h2>
                     <div class="text-center text-sky-300 text-lg space-y-1">
-                        <p class="font-bold text-xl text-sky-400 mb-4">Yala Kewane & Seveur Antoine</p>
+                        <p class="font-bold text-xl text-sky-400 mb-4"> Seveur Antoine</p>
                         <p>BTS SIO 2</p>
                         <p>CFA – CCI Martinique</p>
                     </div>
@@ -1293,6 +1328,689 @@
             </div>
         </div>
     </div>
+    
+    <!-- ============================================== -->
+    <!-- NOUVELLES MODALES DE DOCUMENTATION (MISSION 3) -->
+    <!-- ============================================== -->
+
+    <!-- Doc 1 : Présentation M2L Mission 3 -->
+    <div id="modal-doc3-pres" class="fixed inset-0 z-[60] hidden bg-slate-950/95 backdrop-blur-md p-4 overflow-y-auto">
+        <div class="max-w-4xl mx-auto my-8 bg-slate-900 border border-blue-500/50 rounded-xl shadow-2xl relative">
+            <div class="p-4 border-b border-slate-700 flex justify-between items-center bg-slate-800 rounded-t-xl sticky top-0 z-10">
+                <h3 class="text-white font-bold flex items-center gap-2">📊 Présentation M2L - Mission 3</h3>
+                <button onclick="closeDoc('modal-doc3-pres')" class="text-slate-400 hover:text-white">✕ Fermer</button>
+            </div>
+            <div class="p-8 space-y-12 bg-slate-900 text-left">
+                
+                <!-- Slide 1 -->
+                <div class="aspect-video bg-gradient-to-br from-slate-800 to-slate-950 border border-slate-700 rounded-xl flex flex-col items-center justify-center p-8 shadow-lg relative">
+                    <span class="absolute bottom-4 right-4 text-slate-600 text-sm">1</span>
+                    <h2 class="text-4xl md:text-5xl font-black text-white uppercase text-center mb-6">Maison des Ligues</h2>
+                    <div class="h-1 w-24 bg-blue-500 mb-6"></div>
+                    <p class="text-xl text-blue-400">Seveur Antoine</p>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="aspect-video bg-slate-800 border border-slate-700 rounded-xl p-12 shadow-lg relative flex flex-col justify-center">
+                    <span class="absolute bottom-4 right-4 text-slate-600 text-sm">2</span>
+                    <h3 class="text-3xl font-bold text-blue-400 border-b-2 border-blue-500/30 pb-4 mb-6">Introduction</h3>
+                    <p class="text-lg text-slate-200 leading-relaxed mb-4">Dans le cadre du projet maison des ligues du BTS SIO, cette mission consiste à mettre en place l’infrastructure réseau de la M2L, incluant la segmentation en VLANs, le routage inter-VLAN.</p>
+                    <strong class="text-blue-300 block mb-1">Objectif principal</strong>
+                    <p class="text-base text-slate-300 mb-4">Concevoir, configurer et valider un réseau complet assurant la qualité, la disponibilité et la sécurité des services.</p>
+                    <strong class="text-blue-300 block mb-1">But de la présentation</strong>
+                    <p class="text-base text-slate-300">Présenter le schéma réseau, la simulation, les configurations appliquées, la procédure de tests et une synthèse des choix techniques.</p>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="aspect-video bg-slate-800 border border-slate-700 rounded-xl p-12 shadow-lg relative flex flex-col justify-center">
+                    <span class="absolute bottom-4 right-4 text-slate-600 text-sm">3</span>
+                    <h3 class="text-3xl font-bold text-blue-400 border-b-2 border-blue-500/30 pb-4 mb-8">Programme</h3>
+                    <ul class="text-xl text-slate-200 space-y-4 list-disc list-inside">
+                        <li>Planification</li>
+                        <li>Schéma réseau</li>
+                        <li>Simulation et script de configuration</li>
+                        <li>Procédure de test</li>
+                        <li>Synthèse des choix techniques</li>
+                    </ul>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="aspect-video bg-slate-800 border border-slate-700 rounded-xl p-6 shadow-lg relative flex flex-col">
+                    <span class="absolute bottom-4 right-4 text-slate-600 text-sm z-10 bg-slate-800 px-2 rounded">4</span>
+                    <h3 class="text-3xl font-bold text-blue-400 mb-4 w-full text-left shrink-0">Planification</h3>
+                    <div class="relative flex-grow w-full rounded-lg overflow-hidden shadow-inner bg-slate-900/50">
+                        <img src="Planification - mission 3.png" alt="Planification Mission 3" class="absolute inset-0 w-full h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="hidden absolute inset-0 flex flex-col items-center justify-center text-slate-500 text-center p-4">
+                            <span class="text-4xl mb-2">📁</span>
+                            <p class="text-sm">Pour afficher l'image, placez <b>Planification - Mission 3.png</b><br>dans le même dossier que ce fichier HTML.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="aspect-video bg-slate-800 border border-slate-700 rounded-xl p-6 shadow-lg relative flex flex-col">
+                    <span class="absolute bottom-4 right-4 text-slate-600 text-sm z-10 bg-slate-800 px-2 rounded">5</span>
+                    <h3 class="text-3xl font-bold text-blue-400 mb-4 w-full text-left shrink-0">Schéma réseau</h3>
+                    <div class="relative flex-grow w-full rounded-lg overflow-hidden shadow-inner bg-white">
+                        <img src="Schéma réseau - Mission 3.png" alt="Schéma réseau Mission 3" class="absolute inset-0 w-full h-full object-contain p-2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="hidden absolute inset-0 flex flex-col items-center justify-center text-slate-500 text-center p-4 bg-slate-900/50">
+                            <span class="text-4xl mb-2">📁</span>
+                            <p class="text-sm text-slate-300">Pour afficher l'image, placez <b>Schema - Mission 3.png</b><br>dans le même dossier que ce fichier HTML.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="aspect-video bg-slate-800 border border-slate-700 rounded-xl p-6 shadow-lg relative flex flex-col">
+                    <span class="absolute bottom-4 right-4 text-slate-600 text-sm z-10 bg-slate-800 px-2 rounded">6</span>
+                    <h3 class="text-3xl font-bold text-blue-400 mb-4 w-full text-left shrink-0">Simulation</h3>
+                    <div class="relative flex-grow w-full rounded-lg overflow-hidden shadow-inner bg-white">
+                        <img src="Simulation - Mission 3.png" alt="Simulation Mission 3" class="absolute inset-0 w-full h-full object-contain p-2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="hidden absolute inset-0 flex flex-col items-center justify-center text-slate-500 text-center p-4 bg-slate-900/50">
+                            <span class="text-4xl mb-2">📁</span>
+                            <p class="text-sm text-slate-300">Pour afficher l'image, placez <b>Simulation - Mission 3.png</b><br>dans le même dossier que ce fichier HTML.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 7 -->
+                <div class="aspect-video bg-slate-800 border border-slate-700 rounded-xl p-12 shadow-lg relative flex flex-col justify-center text-center">
+                    <span class="absolute bottom-4 right-4 text-slate-600 text-sm">7</span>
+                    <h3 class="text-3xl font-bold text-blue-400 mb-6">Fichiers de configuration</h3>
+                    <div class="p-6 bg-slate-900/50 rounded-xl border border-slate-700 inline-block mx-auto hover:border-blue-500 transition-colors">
+                        <p class="text-xl text-slate-300">
+                            <button onclick="closeDoc('modal-doc3-pres'); openDoc('modal-doc3-config')" class="text-blue-400 hover:text-blue-300 underline underline-offset-4 cursor-pointer transition-all">
+                                Les fichiers de configuration sont situés dans le dossier "AP Mission 3"
+                            </button>
+                        </p>
+                    </div>
+                    <p class="text-slate-500 mt-6 text-sm">(Cliquez sur le lien ci-dessus pour ouvrir les configurations réseau)</p>
+                </div>
+
+                <!-- Slide 8 -->
+                <div class="aspect-video bg-slate-800 border border-slate-700 rounded-xl p-12 shadow-lg relative flex flex-col justify-center text-center">
+                    <span class="absolute bottom-4 right-4 text-slate-600 text-sm">8</span>
+                    <h3 class="text-3xl font-bold text-blue-400 mb-6">Procédure de test</h3>
+                    <div class="p-6 bg-slate-900/50 rounded-xl border border-slate-700 inline-block mx-auto hover:border-blue-500 transition-colors">
+                        <p class="text-xl text-slate-300">
+                            <button onclick="closeDoc('modal-doc3-pres'); openDoc('modal-doc3-test')" class="text-blue-400 hover:text-blue-300 underline underline-offset-4 cursor-pointer transition-all w-full h-full text-center">
+                                Accéder aux fichiers de test.
+                            </button>
+                        </p>
+                    </div>
+                    <p class="text-slate-500 mt-6 text-sm">(Cliquez sur le lien ci-dessus pour ouvrir la procédure)</p>
+                </div>
+
+                <!-- Slide 9 -->
+                <div class="aspect-video bg-slate-800 border border-slate-700 rounded-xl p-12 shadow-lg relative flex flex-col justify-center text-center">
+                    <span class="absolute bottom-4 right-4 text-slate-600 text-sm">9</span>
+                    <h3 class="text-3xl font-bold text-blue-400 mb-6">Justification des choix techniques</h3>
+                    <div class="p-6 bg-slate-900/50 rounded-xl border border-slate-700 inline-block mx-auto hover:border-blue-500 transition-colors">
+                        <p class="text-xl text-slate-300">
+                            <button onclick="closeDoc('modal-doc3-pres'); openDoc('modal-doc3-justif')" class="text-blue-400 hover:text-blue-300 underline underline-offset-4 cursor-pointer transition-all w-full h-full text-center">
+                                Accéder au fichier des choix techniques.
+                            </button>
+                        </p>
+                    </div>
+                    <p class="text-slate-500 mt-6 text-sm">(Cliquez sur le lien ci-dessus pour ouvrir les choix techniques)</p>
+                </div>
+
+                <!-- Slide 10 -->
+                <div class="aspect-video bg-gradient-to-tl from-slate-800 to-slate-950 border border-slate-700 rounded-xl flex flex-col items-center justify-center p-8 shadow-lg relative">
+                    <span class="absolute bottom-4 right-4 text-slate-600 text-sm">10</span>
+                    <h2 class="text-5xl font-black text-white uppercase text-center mb-8">Merci</h2>
+                    <div class="text-center text-blue-300 text-lg space-y-1">
+                        <p class="font-bold text-xl text-blue-400 mb-4"> Seveur Antoine</p>
+                        <p>BTS SIO 2</p>
+                        <p>CFA – CCI Martinique</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Doc 2 : Fichiers de config Mission 3 -->
+    <div id="modal-doc3-config" class="fixed inset-0 z-[60] hidden bg-slate-950/95 backdrop-blur-md p-4 overflow-y-auto">
+        <div class="max-w-5xl mx-auto my-8 bg-[#000000] border border-slate-700 rounded-xl shadow-2xl relative overflow-hidden flex flex-col h-[85vh]">
+            <div class="p-3 border-b border-slate-800 flex justify-between items-center bg-[#161b22] shrink-0">
+                <div class="flex items-center gap-2">
+                    <div class="flex gap-1.5 ml-2 mr-4">
+                        <div class="w-3 h-3 rounded-full bg-rose-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+                    </div>
+                    <h3 class="text-slate-300 font-mono text-sm">Terminal - Configuration Cisco</h3>
+                </div>
+                <button onclick="closeDoc('modal-doc3-config')" class="text-slate-400 hover:text-white px-2">✕</button>
+            </div>
+            
+            <div class="flex flex-col md:flex-row h-full overflow-hidden">
+                <!-- Sidebar (Tabs) -->
+                <div class="w-full md:w-48 bg-[#161b22] border-r border-slate-800 flex md:flex-col overflow-x-auto shrink-0 p-2 gap-1">
+                    <button onclick="openConfigTab('conf-router')" id="btn-conf-router" class="text-left px-4 py-2 rounded-md text-sm font-mono text-slate-300 hover:bg-slate-800 transition-colors bg-slate-800 text-blue-400">Router.txt</button>
+                    <button onclick="openConfigTab('conf-swbata')" id="btn-conf-swbata" class="text-left px-4 py-2 rounded-md text-sm font-mono text-slate-300 hover:bg-slate-800 transition-colors">SwBatA.txt</button>
+                    <button onclick="openConfigTab('conf-swl3batb')" id="btn-conf-swl3batb" class="text-left px-4 py-2 rounded-md text-sm font-mono text-slate-300 hover:bg-slate-800 transition-colors">SWL3BatB.txt</button>
+                    <button onclick="openConfigTab('conf-swbatc')" id="btn-conf-swbatc" class="text-left px-4 py-2 rounded-md text-sm font-mono text-slate-300 hover:bg-slate-800 transition-colors">SwBatC.txt</button>
+                </div>
+                
+                <!-- Contenu (CLI) -->
+                <div class="flex-grow p-4 overflow-y-auto bg-black text-emerald-500 font-mono">
+                    
+                    <!-- Contenu Router -->
+                    <div id="conf-router" class="config-tab block">
+<pre class="whitespace-pre-wrap leading-relaxed">!Router
+en
+conf t
+hostname Router
+interface FastEthernet0/1
+description INSIDE
+ip address 10.25.0.2 255.255.255.0
+no shut
+ip nat inside
+interface FastEthernet0/0
+description OUTSIDE
+ip address DHCP
+no shut
+ip nat outside
+ip route 172.25.0.0 255.255.0.0 10.25.0.1
+access-list 1 permit 10.25.0.0 0.0.0.255
+access-list 1 permit 172.25.0.0 0.0.255.255
+ip nat inside source list 1 interface FastEthernet0/0 overload
+end</pre>
+                    </div>
+
+                    <!-- Contenu SwBatA -->
+                    <div id="conf-swbata" class="config-tab hidden">
+<pre class="whitespace-pre-wrap leading-relaxed">!SwL2 Bât A
+en
+conf t
+hostname SWL2BatA
+vlan 35
+name Badminton
+vlan 45
+name Escrime
+vlan 55
+name Volley
+vlan 65
+name Handball
+vlan 85
+name AdminM2L
+
+int range fa0/1-3
+sw access vlan 35
+int range fa0/4-6
+sw access vlan 45
+int range fa0/7-9
+sw access vlan 55
+int range fa0/10-12
+sw access vlan 65
+int fa0/20
+sw mode trunk
+sw trunk allowed vlan 35,45,55,65,75,85
+int fa0/24
+sw mode trunk
+sw trunk allowed vlan 35,45,55,65,75,85
+spanning-tree portfast disable
+no shut
+end</pre>
+                    </div>
+
+                    <!-- Contenu SWL3BatB -->
+                    <div id="conf-swl3batb" class="config-tab hidden">
+<pre class="whitespace-pre-wrap leading-relaxed">!SwL3 Bât B
+en
+conf t
+vlan 35
+name Badminton
+vlan 45
+name Escrime
+vlan 55
+name Volley
+vlan 65
+name Handball
+vlan 75
+name DMZ
+vlan 85
+name AdminM2L
+
+int gi1/0/20
+sw trunk encapsulation dot1Q
+sw mode trunk
+sw trunk allowed vlan 35,45,55,65,75,85
+
+int gi1/0/22
+sw trunk encapsulation dot1Q
+sw mode trunk
+sw trunk allowed vlan 35,45,55,65,75,85
+
+int gi1/0/24
+no switchport
+ip add 10.25.0.1 255.255.255.0
+no shut
+
+int gi1/0/21
+sw access vlan 75
+int gi1/0/23
+sw access vlan 75
+
+int vlan 35
+ip add 192.168.35.254 255.255.255.0
+ip helper-address 172.25.0.1
+no shut
+int vlan 45
+ip add 192.168.45.254 255.255.255.0
+ip helper-address 172.25.0.1
+no shut
+int vlan 55
+ip add 192.168.55.254 255.255.255.0
+ip helper-address 172.25.0.1
+no shut
+int vlan 65
+ip add 192.168.65.254 255.255.255.0
+ip helper-address 172.25.0.1
+no shut
+int vlan 75
+ip add 192.168.75.254 255.255.255.0
+no shut
+int vlan 85
+ip add 192.168.85.254 255.255.255.0
+no shut
+
+ip routing
+end</pre>
+                    </div>
+
+                    <!-- Contenu SwBatC -->
+                    <div id="conf-swbatc" class="config-tab hidden">
+<pre class="whitespace-pre-wrap leading-relaxed">!SwL2 Bât C
+en
+conf t
+hostname SWL2BatC
+vlan 35
+name Badminton
+vlan 45
+name Escrime
+vlan 55
+name Volley
+vlan 65
+name Handball
+vlan 85
+name AdminM2L
+
+int range fa0/1-3
+sw access vlan 35
+int range fa0/4-6
+sw access vlan 45
+int range fa0/7-9
+sw access vlan 55
+int range fa0/10-12
+sw access vlan 65
+int range fa0/14-19
+sw acces vlan 85
+int fa0/22
+sw mode trunk
+sw trunk allowed vlan 35,45,55,65,75,85
+int fa0/24
+sw mode trunk
+sw trunk allowed vlan 35,45,55,65,75,85
+spanning-tree portfast disable
+no shut
+end</pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Doc 3 : Procédure de test Mission 3 -->
+    <div id="modal-doc3-test" class="fixed inset-0 z-[60] hidden bg-slate-950/95 backdrop-blur-md p-4 overflow-y-auto">
+        <div class="max-w-5xl mx-auto my-8 bg-slate-900 border border-sky-500/50 rounded-xl shadow-2xl relative">
+            <div class="p-4 border-b border-slate-700 flex justify-between items-center bg-slate-800 rounded-t-xl sticky top-0 z-10">
+                <h3 class="text-white font-bold flex items-center gap-2">📋 Procédure de test mission 3</h3>
+                <button onclick="closeDoc('modal-doc3-test')" class="text-slate-400 hover:text-white">✕ Fermer</button>
+            </div>
+            <div class="p-6 md:p-8 space-y-8 text-slate-300 text-left">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-black text-white uppercase">PROCÉDURE DE TEST</h2>
+                    <h3 class="text-xl text-blue-400 font-semibold mt-2">Validation des Services Réseau</h3>
+                    <p class="text-slate-400 text-sm mt-1">Projet BTS SIO - Infrastructure Réseau</p>
+                </div>
+                
+                <div class="bg-slate-800/40 p-5 rounded-xl border border-slate-700/50">
+                    <h4 class="font-bold text-sky-400 mb-2">Objectif</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed mb-4">Garantir le bon fonctionnement, la sécurité et la cohérence des services réseau mis en place dans l'infrastructure.</p>
+                    <h4 class="font-bold text-sky-400 mb-2">Méthodologie</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed">Chaque test doit être réalisé rigoureusement en suivant les étapes décrites. Les résultats obtenus doivent être comparés aux résultats attendus afin de valider ou non le service.</p>
+                </div>
+                
+                <!-- Test 1 -->
+                <div>
+                    <h4 class="font-bold text-blue-400 mb-3 text-lg border-b border-slate-700 pb-2">1. Routage Inter-VLAN</h4>
+                    <p class="text-sm mb-4 text-slate-400 font-bold">Objectif : <span class="font-normal">Valider la communication entre différents VLANs.</span></p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm border-collapse border border-slate-700">
+                            <thead class="bg-slate-800 text-blue-300">
+                                <tr>
+                                    <th class="border border-slate-700 p-3 text-left w-1/4">Étapes</th>
+                                    <th class="border border-slate-700 p-3 text-left w-1/4">Résultat attendu</th>
+                                    <th class="border border-slate-700 p-3 text-left w-1/4">Résultat obtenu</th>
+                                    <th class="border border-slate-700 p-3 text-center w-1/4">Statut</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-slate-900/50">
+                                <tr>
+                                    <td class="border border-slate-700 p-3 align-top leading-relaxed">• Ping de la passerelle</td>
+                                    <td class="border border-slate-700 p-3 align-top leading-relaxed">• Réponse positive</td>
+                                    <td class="border border-slate-700 p-3 align-top"></td>
+                                    <td class="border border-slate-700 p-3 align-top">
+                                        <div class="flex flex-col gap-2">
+                                            <label class="flex items-center gap-2 cursor-pointer hover:bg-slate-800 p-1 rounded transition-colors"><input type="checkbox" class="accent-emerald-500 w-4 h-4"> <span class="text-emerald-400 text-xs font-bold uppercase">Conforme</span></label>
+                                            <label class="flex items-center gap-2 cursor-pointer hover:bg-slate-800 p-1 rounded transition-colors"><input type="checkbox" class="accent-rose-500 w-4 h-4"> <span class="text-rose-400 text-xs font-bold uppercase">Non conf.</span></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-slate-700 p-3 align-top leading-relaxed">• Ping vers un autre VLAN</td>
+                                    <td class="border border-slate-700 p-3 align-top leading-relaxed">• Communication fonctionnelle</td>
+                                    <td class="border border-slate-700 p-3 align-top"></td>
+                                    <td class="border border-slate-700 p-3 align-top">
+                                        <div class="flex flex-col gap-2">
+                                            <label class="flex items-center gap-2 cursor-pointer hover:bg-slate-800 p-1 rounded transition-colors"><input type="checkbox" class="accent-emerald-500 w-4 h-4"> <span class="text-emerald-400 text-xs font-bold uppercase">Conforme</span></label>
+                                            <label class="flex items-center gap-2 cursor-pointer hover:bg-slate-800 p-1 rounded transition-colors"><input type="checkbox" class="accent-rose-500 w-4 h-4"> <span class="text-rose-400 text-xs font-bold uppercase">Non conf.</span></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Test 2 -->
+                <div>
+                    <h4 class="font-bold text-blue-400 mb-3 text-lg border-b border-slate-700 pb-2">2. Spanning Tree Protocol (STP)</h4>
+                    <p class="text-sm mb-4 text-slate-400 font-bold">Objectif : <span class="font-normal">Assurer la redondance et la prévention des boucles réseau.</span></p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm border-collapse border border-slate-700">
+                            <thead class="bg-slate-800 text-blue-300">
+                                <tr>
+                                    <th class="border border-slate-700 p-3 text-left w-1/4">Étapes</th>
+                                    <th class="border border-slate-700 p-3 text-left w-1/4">Résultat attendu</th>
+                                    <th class="border border-slate-700 p-3 text-left w-1/4">Résultat obtenu</th>
+                                    <th class="border border-slate-700 p-3 text-center w-1/4">Statut</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-slate-900/50">
+                                <tr>
+                                    <td class="border border-slate-700 p-3 align-top leading-relaxed">• show spanning-tree</td>
+                                    <td class="border border-slate-700 p-3 align-top leading-relaxed">• Switch 3750 défini comme Root Bridge</td>
+                                    <td class="border border-slate-700 p-3 align-top"></td>
+                                    <td class="border border-slate-700 p-3 align-top">
+                                        <div class="flex flex-col gap-2">
+                                            <label class="flex items-center gap-2 cursor-pointer hover:bg-slate-800 p-1 rounded transition-colors"><input type="checkbox" class="accent-emerald-500 w-4 h-4"> <span class="text-emerald-400 text-xs font-bold uppercase">Conforme</span></label>
+                                            <label class="flex items-center gap-2 cursor-pointer hover:bg-slate-800 p-1 rounded transition-colors"><input type="checkbox" class="accent-rose-500 w-4 h-4"> <span class="text-rose-400 text-xs font-bold uppercase">Non conf.</span></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-slate-700 p-3 align-top leading-relaxed">• Vérification du port Fa0/24</td>
+                                    <td class="border border-slate-700 p-3 align-top leading-relaxed">• État Blocking</td>
+                                    <td class="border border-slate-700 p-3 align-top"></td>
+                                    <td class="border border-slate-700 p-3 align-top">
+                                        <div class="flex flex-col gap-2">
+                                            <label class="flex items-center gap-2 cursor-pointer hover:bg-slate-800 p-1 rounded transition-colors"><input type="checkbox" class="accent-emerald-500 w-4 h-4"> <span class="text-emerald-400 text-xs font-bold uppercase">Conforme</span></label>
+                                            <label class="flex items-center gap-2 cursor-pointer hover:bg-slate-800 p-1 rounded transition-colors"><input type="checkbox" class="accent-rose-500 w-4 h-4"> <span class="text-rose-400 text-xs font-bold uppercase">Non conf.</span></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-slate-700 p-3 align-top leading-relaxed">• Simulation de coupure de lien</td>
+                                    <td class="border border-slate-700 p-3 align-top leading-relaxed">• Bascule automatique en Forwarding</td>
+                                    <td class="border border-slate-700 p-3 align-top"></td>
+                                    <td class="border border-slate-700 p-3 align-top">
+                                        <div class="flex flex-col gap-2">
+                                            <label class="flex items-center gap-2 cursor-pointer hover:bg-slate-800 p-1 rounded transition-colors"><input type="checkbox" class="accent-emerald-500 w-4 h-4"> <span class="text-emerald-400 text-xs font-bold uppercase">Conforme</span></label>
+                                            <label class="flex items-center gap-2 cursor-pointer hover:bg-slate-800 p-1 rounded transition-colors"><input type="checkbox" class="accent-rose-500 w-4 h-4"> <span class="text-rose-400 text-xs font-bold uppercase">Non conf.</span></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Test 3 -->
+                <div>
+                    <h4 class="font-bold text-blue-400 mb-3 text-lg border-b border-slate-700 pb-2">3. NAT (Network Address Translation)</h4>
+                    <p class="text-sm mb-4 text-slate-400 font-bold">Objectif : <span class="font-normal">Vérifier la traduction d'adresses et le contrôle d'accès réseau.</span></p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm border-collapse border border-slate-700">
+                            <thead class="bg-slate-800 text-blue-300">
+                                <tr>
+                                    <th class="border border-slate-700 p-3 text-left w-1/4">Étapes</th>
+                                    <th class="border border-slate-700 p-3 text-left w-1/4">Résultat attendu</th>
+                                    <th class="border border-slate-700 p-3 text-left w-1/4">Résultat obtenu</th>
+                                    <th class="border border-slate-700 p-3 text-center w-1/4">Statut</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-slate-900/50">
+                                <tr>
+                                    <td class="border border-slate-700 p-3 align-top leading-relaxed">• Ping Internet depuis AdminM2L</td>
+                                    <td class="border border-slate-700 p-3 align-top leading-relaxed">• Accès autorisé</td>
+                                    <td class="border border-slate-700 p-3 align-top"></td>
+                                    <td class="border border-slate-700 p-3 align-top">
+                                        <div class="flex flex-col gap-2">
+                                            <label class="flex items-center gap-2 cursor-pointer hover:bg-slate-800 p-1 rounded transition-colors"><input type="checkbox" class="accent-emerald-500 w-4 h-4"> <span class="text-emerald-400 text-xs font-bold uppercase">Conforme</span></label>
+                                            <label class="flex items-center gap-2 cursor-pointer hover:bg-slate-800 p-1 rounded transition-colors"><input type="checkbox" class="accent-rose-500 w-4 h-4"> <span class="text-rose-400 text-xs font-bold uppercase">Non conf.</span></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-slate-700 p-3 align-top leading-relaxed">• Ping vers VLAN Sport</td>
+                                    <td class="border border-slate-700 p-3 align-top leading-relaxed">• Accès refusé</td>
+                                    <td class="border border-slate-700 p-3 align-top"></td>
+                                    <td class="border border-slate-700 p-3 align-top">
+                                        <div class="flex flex-col gap-2">
+                                            <label class="flex items-center gap-2 cursor-pointer hover:bg-slate-800 p-1 rounded transition-colors"><input type="checkbox" class="accent-emerald-500 w-4 h-4"> <span class="text-emerald-400 text-xs font-bold uppercase">Conforme</span></label>
+                                            <label class="flex items-center gap-2 cursor-pointer hover:bg-slate-800 p-1 rounded transition-colors"><input type="checkbox" class="accent-rose-500 w-4 h-4"> <span class="text-rose-400 text-xs font-bold uppercase">Non conf.</span></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-slate-700 p-3 align-top leading-relaxed">• show ip nat translations</td>
+                                    <td class="border border-slate-700 p-3 align-top leading-relaxed">• Entrées NAT visibles</td>
+                                    <td class="border border-slate-700 p-3 align-top"></td>
+                                    <td class="border border-slate-700 p-3 align-top">
+                                        <div class="flex flex-col gap-2">
+                                            <label class="flex items-center gap-2 cursor-pointer hover:bg-slate-800 p-1 rounded transition-colors"><input type="checkbox" class="accent-emerald-500 w-4 h-4"> <span class="text-emerald-400 text-xs font-bold uppercase">Conforme</span></label>
+                                            <label class="flex items-center gap-2 cursor-pointer hover:bg-slate-800 p-1 rounded transition-colors"><input type="checkbox" class="accent-rose-500 w-4 h-4"> <span class="text-rose-400 text-xs font-bold uppercase">Non conf.</span></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Test 4 -->
+                <div>
+                    <h4 class="font-bold text-blue-400 mb-3 text-lg border-b border-slate-700 pb-2">4. Zone DMZ</h4>
+                    <p class="text-sm mb-4 text-slate-400 font-bold">Objectif : <span class="font-normal">Tester l'accessibilité et l'isolation des services exposés.</span></p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm border-collapse border border-slate-700">
+                            <thead class="bg-slate-800 text-blue-300">
+                                <tr>
+                                    <th class="border border-slate-700 p-3 text-left w-1/4">Étapes</th>
+                                    <th class="border border-slate-700 p-3 text-left w-1/4">Résultat attendu</th>
+                                    <th class="border border-slate-700 p-3 text-left w-1/4">Résultat obtenu</th>
+                                    <th class="border border-slate-700 p-3 text-center w-1/4">Statut</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-slate-900/50">
+                                <tr>
+                                    <td class="border border-slate-700 p-3 align-top leading-relaxed">• Accès aux services WEB / FTP</td>
+                                    <td class="border border-slate-700 p-3 align-top leading-relaxed">• Fonctionnel</td>
+                                    <td class="border border-slate-700 p-3 align-top"></td>
+                                    <td class="border border-slate-700 p-3 align-top">
+                                        <div class="flex flex-col gap-2">
+                                            <label class="flex items-center gap-2 cursor-pointer hover:bg-slate-800 p-1 rounded transition-colors"><input type="checkbox" class="accent-emerald-500 w-4 h-4"> <span class="text-emerald-400 text-xs font-bold uppercase">Conforme</span></label>
+                                            <label class="flex items-center gap-2 cursor-pointer hover:bg-slate-800 p-1 rounded transition-colors"><input type="checkbox" class="accent-rose-500 w-4 h-4"> <span class="text-rose-400 text-xs font-bold uppercase">Non conf.</span></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-slate-700 p-3 align-top leading-relaxed">• Test d'isolation réseau</td>
+                                    <td class="border border-slate-700 p-3 align-top leading-relaxed">• Isolation respectée</td>
+                                    <td class="border border-slate-700 p-3 align-top"></td>
+                                    <td class="border border-slate-700 p-3 align-top">
+                                        <div class="flex flex-col gap-2">
+                                            <label class="flex items-center gap-2 cursor-pointer hover:bg-slate-800 p-1 rounded transition-colors"><input type="checkbox" class="accent-emerald-500 w-4 h-4"> <span class="text-emerald-400 text-xs font-bold uppercase">Conforme</span></label>
+                                            <label class="flex items-center gap-2 cursor-pointer hover:bg-slate-800 p-1 rounded transition-colors"><input type="checkbox" class="accent-rose-500 w-4 h-4"> <span class="text-rose-400 text-xs font-bold uppercase">Non conf.</span></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Synthèse finale -->
+                <div class="mt-8 p-6 bg-slate-800 border border-slate-700 rounded-xl">
+                    <h4 class="font-bold text-white mb-4 text-center text-lg uppercase tracking-wider">Synthèse des Tests</h4>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                        <div class="bg-slate-900/50 p-4 rounded-lg">
+                            <span class="text-sky-300 font-bold block mb-2">Inter-VLAN</span>
+                            <div class="flex flex-col gap-1 items-center">
+                                <label class="cursor-pointer text-sm text-emerald-400"><input type="radio" name="synth_vlan_m3" class="accent-emerald-500"> Validé</label>
+                                <label class="cursor-pointer text-sm text-rose-400"><input type="radio" name="synth_vlan_m3" class="accent-rose-500"> Non validé</label>
+                            </div>
+                        </div>
+                        <div class="bg-slate-900/50 p-4 rounded-lg">
+                            <span class="text-sky-300 font-bold block mb-2">STP</span>
+                            <div class="flex flex-col gap-1 items-center">
+                                <label class="cursor-pointer text-sm text-emerald-400"><input type="radio" name="synth_stp_m3" class="accent-emerald-500"> Validé</label>
+                                <label class="cursor-pointer text-sm text-rose-400"><input type="radio" name="synth_stp_m3" class="accent-rose-500"> Non validé</label>
+                            </div>
+                        </div>
+                        <div class="bg-slate-900/50 p-4 rounded-lg">
+                            <span class="text-sky-300 font-bold block mb-2">NAT</span>
+                            <div class="flex flex-col gap-1 items-center">
+                                <label class="cursor-pointer text-sm text-emerald-400"><input type="radio" name="synth_nat_m3" class="accent-emerald-500"> Validé</label>
+                                <label class="cursor-pointer text-sm text-rose-400"><input type="radio" name="synth_nat_m3" class="accent-rose-500"> Non validé</label>
+                            </div>
+                        </div>
+                        <div class="bg-slate-900/50 p-4 rounded-lg">
+                            <span class="text-sky-300 font-bold block mb-2">DMZ</span>
+                            <div class="flex flex-col gap-1 items-center">
+                                <label class="cursor-pointer text-sm text-emerald-400"><input type="radio" name="synth_dmz_m3" class="accent-emerald-500"> Validé</label>
+                                <label class="cursor-pointer text-sm text-rose-400"><input type="radio" name="synth_dmz_m3" class="accent-rose-500"> Non validé</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Doc 4 : Choix techniques Mission 3 -->
+    <div id="modal-doc3-justif" class="fixed inset-0 z-[60] hidden bg-slate-950/95 backdrop-blur-md p-4 overflow-y-auto">
+        <div class="max-w-4xl mx-auto my-8 bg-slate-900 border border-sky-500/50 rounded-xl shadow-2xl relative">
+            <div class="p-4 border-b border-slate-700 flex justify-between items-center bg-slate-800 rounded-t-xl sticky top-0 z-10">
+                <h3 class="text-white font-bold flex items-center gap-2">📝 Justification des choix techniques</h3>
+                <button onclick="closeDoc('modal-doc3-justif')" class="text-slate-400 hover:text-white">✕ Fermer</button>
+            </div>
+            <div class="p-8 space-y-8 text-slate-300 text-left">
+                
+                <section>
+                    <h4 class="text-lg font-bold text-blue-400 border-b border-slate-700 pb-2 mb-3">Justification des choix techniques</h4>
+                    <p class="mb-2">Dans le cadre de la conception et de la mise en œuvre de cette infrastructure réseau, plusieurs choix techniques ont été réalisés afin de répondre aux objectifs de segmentation, sécurité, performance et haute disponibilité.</p>
+                </section>
+
+                <section>
+                    <h4 class="text-lg font-bold text-blue-400 border-b border-slate-700 pb-2 mb-3">Choix de l'architecture réseau</h4>
+                    <p class="mb-2">L'infrastructure repose sur une architecture hiérarchisée, avec un switch cœur de réseau de niveau 3 (3750) et des switchs d'accès 2960.</p>
+                    <p class="mb-2">Ce choix permet de séparer clairement les rôles :</p>
+                    <ul class="list-disc pl-5 space-y-1 text-slate-400 mb-3">
+                        <li>Le switch cœur 3750 assure le routage inter-VLAN, centralise les flux et constitue le point stratégique du réseau.</li>
+                        <li>Les switchs 2960 assurent la distribution des accès utilisateurs.</li>
+                    </ul>
+                    <p class="text-sm italic text-slate-500">Cette organisation améliore la lisibilité du réseau, facilite son administration et s'aligne avec les bonnes pratiques en environnement professionnel.</p>
+                </section>
+
+                <section>
+                    <h4 class="text-lg font-bold text-blue-400 border-b border-slate-700 pb-2 mb-3">Segmentation par VLAN</h4>
+                    <p class="mb-2">La mise en place de plusieurs VLANs (Badminton, Escrime, Volley, Handball, AdminM2L, DMZ) répond à un besoin de segmentation logique du réseau.</p>
+                    <p class="mb-2">Les objectifs de ce choix sont :</p>
+                    <ul class="list-disc pl-5 space-y-1 text-slate-400 mb-3">
+                        <li>Réduire les domaines de broadcast</li>
+                        <li>Améliorer la sécurité en isolant les flux</li>
+                        <li>Organiser le réseau par fonction métier</li>
+                    </ul>
+                    <p class="mb-2">Le VLAN AdminM2L (85) regroupe les services critiques (DHCP, DNS, AD), tandis que le VLAN DMZ (75) permet d'isoler les serveurs exposés (WEB, FTP).</p>
+                </section>
+
+                <section>
+                    <h4 class="text-lg font-bold text-blue-400 border-b border-slate-700 pb-2 mb-3">Choix du routage inter-VLAN sur le switch cœur</h4>
+                    <p class="mb-2">Le routage inter-VLAN est assuré par le switch 3750. Ce choix permet :</p>
+                    <ul class="list-disc pl-5 space-y-1 text-slate-400 mb-3">
+                        <li>Une meilleure performance par rapport à un routeur</li>
+                        <li>Une centralisation du routage interne</li>
+                        <li>De faire sortir plusieurs réseaux privés avec une seule adresse IP publique via le routeur en bordure de réseau en utilisant la méthode NAT overload.</li>
+                    </ul>
+                    <p class="mb-2">L'accès Internet est volontairement restreint au VLAN AdminM2L, afin de :</p>
+                    <ul class="list-disc pl-5 space-y-1 text-slate-400">
+                        <li>Renforcer la sécurité</li>
+                        <li>Limiter les usages non nécessaires</li>
+                        <li>Contrôler les flux sortants</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4 class="text-lg font-bold text-blue-400 border-b border-slate-700 pb-2 mb-3">Choix d'une liaison L3 vers le routeur</h4>
+                    <p class="mb-2">La liaison entre le switch cœur et le routeur a été configurée en port routé. Ce choix permet :</p>
+                    <ul class="list-disc pl-5 space-y-1 text-slate-400">
+                        <li>Une séparation claire entre niveau 2 et niveau 3</li>
+                        <li>Une configuration plus propre et professionnelle</li>
+                        <li>Une meilleure évolutivité</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4 class="text-lg font-bold text-blue-400 border-b border-slate-700 pb-2 mb-3">Mise en place de la DMZ</h4>
+                    <p class="mb-2">La création d'un VLAN dédié à la DMZ permet d'isoler les serveurs exposés (WEB, FTP) du réseau interne. Ce choix améliore :</p>
+                    <ul class="list-disc pl-5 space-y-1 text-slate-400">
+                        <li>La sécurité globale</li>
+                        <li>La maîtrise des flux réseau</li>
+                        <li>La conformité aux architectures professionnelles</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4 class="text-lg font-bold text-blue-400 border-b border-slate-700 pb-2 mb-3">Démarche de conception</h4>
+                    <p class="mb-2">Le projet a été réalisé en plusieurs étapes :</p>
+                    <ol class="list-decimal pl-5 space-y-1 text-slate-400 mb-3">
+                        <li>Conception de l'architecture avec Microsoft Visio</li>
+                        <li>Simulation et validation avec Packet Tracer</li>
+                        <li>Mise en œuvre réelle en environnement pédagogique</li>
+                    </ol>
+                    <p class="mb-2">Cette démarche progressive a permis de :</p>
+                    <ul class="list-disc pl-5 space-y-1 text-slate-400">
+                        <li>Valider les choix techniques en amont</li>
+                        <li>Corriger les erreurs avant déploiement</li>
+                        <li>Garantir la cohérence globale du projet</li>
+                    </ul>
+                </section>
+                
+                <div class="bg-blue-900/20 border border-blue-500/30 p-5 rounded-xl mt-6">
+                    <h4 class="font-bold text-blue-400 mb-2 uppercase tracking-wider text-sm">Conclusion</h4>
+                    <p class="text-sm leading-relaxed mb-2">L'ensemble des choix réalisés permet d'obtenir une infrastructure réseau structurée, sécurisée, performante et évolutive.</p>
+                    <p class="text-sm leading-relaxed">Ces choix s'inscrivent dans une logique professionnelle et respectent les bonnes pratiques en administration réseau.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
         <!-- BOUTON FLOTTANT CONTACT -->
     <div class="fixed bottom-8 right-8 z-40 group">
@@ -1367,6 +2085,7 @@
             document.querySelectorAll('.skill-card').forEach(card => card.classList.remove('active-mobile'));
             if (!isActive) element.classList.add('active-mobile');
         }
+        
         function openMission(missionId) {
             const modal = document.getElementById(missionId);
             if (modal) {
@@ -1382,7 +2101,7 @@
                 document.body.style.overflow = 'auto';
             }
         }
-
+        
         function openDoc(docId) {
             const modal = document.getElementById(docId);
             if (modal) {
@@ -1393,9 +2112,38 @@
         function closeDoc(docId) {
             const modal = document.getElementById(docId);
             if (modal) {
-                modal.style.display = 'none';     
+                modal.style.display = 'none'; 
             }
         }
+        
+        // --- LOGIQUE DES ONGLETS DE CONFIGURATION ---
+        function openConfigTab(tabId) {
+            // Masquer tous les contenus avec Tailwind classes au lieu du CSS externe
+            document.querySelectorAll('.config-tab').forEach(tab => {
+                tab.classList.remove('block');
+                tab.classList.add('hidden');
+            });
+            // Réinitialiser les couleurs des boutons
+            document.querySelectorAll('[id^="btn-conf-"]').forEach(btn => {
+                btn.classList.remove('bg-slate-800', 'text-blue-400');
+                btn.classList.add('text-slate-300');
+            });
+            
+            // Afficher le contenu cliqué
+            const targetTab = document.getElementById(tabId);
+            if (targetTab) {
+                targetTab.classList.remove('hidden');
+                targetTab.classList.add('block');
+            }
+            
+            // Mettre le bouton en surbrillance
+            const btn = document.getElementById('btn-' + tabId);
+            if (btn) {
+                btn.classList.add('bg-slate-800', 'text-blue-400');
+                btn.classList.remove('text-slate-300');
+            }
+        }
+
                 // 🟢 AJOUT CV : LOGIQUE DE LA MODALE CV
         function openCV() {
             const modal = document.getElementById('modal-cv');
@@ -1492,24 +2240,24 @@
             if (!e.target.closest('.skill-card')) {
                 document.querySelectorAll('.skill-card').forEach(card => card.classList.remove('active-mobile'));
             }
-
+            
             const modalCV = document.getElementById('modal-cv');
             if (e.target === modalCV) closeCV();
-
+            
+            // Fermeture Synthèse
+            const modalSynthesis = document.getElementById('modal-synthesis');
+            if (e.target === modalSynthesis) closeSynthesis();
+            
             const modalMission1 = document.getElementById('modal-mission1');
             if (e.target === modalMission1) closeMission('modal-mission1');
 
             const modalMission3 = document.getElementById('modal-mission3');
             if (e.target === modalMission3) closeMission('modal-mission3');
             
-            // Fermeture Synthèse
-            const modalSynthesis = document.getElementById('modal-synthesis');
-            if (e.target === modalSynthesis) closeSynthesis();
-            
             // Fermeture Contact
             const modalContact = document.getElementById('modal-contact');
             if (e.target === modalContact) closeContact();
-
+            
             const modalDocPres = document.getElementById('modal-doc-pres');
             if (e.target === modalDocPres) closeDoc('modal-doc-pres');
 
@@ -1518,6 +2266,19 @@
 
             const modalDocJustif = document.getElementById('modal-doc-justif');
             if (e.target === modalDocJustif) closeDoc('modal-doc-justif');
+            
+            // Modales Mission 3
+            const modalDoc3Pres = document.getElementById('modal-doc3-pres');
+            if (e.target === modalDoc3Pres) closeDoc('modal-doc3-pres');
+
+            const modalDoc3Config = document.getElementById('modal-doc3-config');
+            if (e.target === modalDoc3Config) closeDoc('modal-doc3-config');
+
+            const modalDoc3Test = document.getElementById('modal-doc3-test');
+            if (e.target === modalDoc3Test) closeDoc('modal-doc3-test');
+
+            const modalDoc3Justif = document.getElementById('modal-doc3-justif');
+            if (e.target === modalDoc3Justif) closeDoc('modal-doc3-justif');
 
         });
 
