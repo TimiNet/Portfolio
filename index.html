@@ -1611,11 +1611,20 @@ ip add 192.168.65.254 255.255.255.0
 ip helper-address 172.25.0.1
 no shut
 int vlan 75
-ip add 192.168.75.254 255.255.255.0
+ip add 10.65.0.254 255.255.255.0
+ip helper-address 172.25.0.1
 no shut
 int vlan 85
-ip add 192.168.85.254 255.255.255.0
+ip add 172.25.0.254 255.255.255.0
+ip helper-address 172.25.0.1
 no shut
+end
+
+conf t
+ip routing
+!SwL3 route
+ip route 0.0.0.0 0.0.0.0 10.25.0.2
+spanning-tree vlan 1,35,45,55,65,75,85 priority 4096
 
 ip routing
 end</pre>
